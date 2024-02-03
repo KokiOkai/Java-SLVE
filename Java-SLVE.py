@@ -2,7 +2,7 @@
 def SingleLetterVariableEvaluation(textFile):
     # ToDo: 自動で出力ファイル名を決めるように変更する
     # output_txt_fileは保存するtxtファイルの場所
-    output_txt_file = "./output_SVC.txt"
+    output_txt_file = "./output_Java-SLVE.txt"
 
     try:
         # 読み込むtxtファイルを開く
@@ -50,33 +50,51 @@ def SingleLetterVariableEvaluation(textFile):
                         Begin = int(data[5])
                         # End: スコープ終了行を取得
                         End = int(data[6])
-
                         # 変数名の文字数を取得
                         name_length = len(Name)
 
-                        # テスト用とドキュメント用と思われるファイルを除く
-                        EX_keyword_1 = 'test'
-                        EX_keyword_2 = 'documentation'
-                        if EX_keyword_1 not in Path and EX_keyword_2 not in Path:
-                            # ローカル（L）かつ一文字変数のデータのみ取得
-                            if Kind == 'L' and name_length == 1:
-                                # スコープ算出
-                                scope_info = str(ScopeCalculation(Begin, End))
-                                # スコープ追加
-                                line_add_scope = read_line + '\t' + scope_info
 
-                                # アルファベット評価
-                                AE_Level_info = AlphabetEvaluation(Name, Type)
-                                # アルファベット評価追加
-                                line_add_AE_Level = line_add_scope + '\t' + AE_Level_info
+                        # 一文字変数のデータのみ処理
+                        if name_length == 1:
+                            # スコープ算出
+                            scope_info = str(ScopeCalculation(Begin, End))
+                            # スコープ追加
+                            line_add_scope = read_line + '\t' + scope_info
 
-                                # スコープ評価
-                                SE_Level_info = ScopeEvaluation(Type, float(scope_info))
-                                # スコープ評価追加
-                                line_add_SE_Level = line_add_AE_Level + '\t' + SE_Level_info
+                            # アルファベット評価
+                            AE_Level_info = AlphabetEvaluation(Name, Type)
+                            # アルファベット評価追加
+                            line_add_AE_Level = line_add_scope + '\t' + AE_Level_info
 
+                            # プロダクトファイルの処理
+                            EX_keyword_1 = 'test'
+                            EX_keyword_2 = 'documentation'
+                            if EX_keyword_1 not in Path and EX_keyword_2 not in Path:
+                                # ローカル変数（L）の処理
+                                if Kind == 'L':
+
+                                    # スコープ評価
+                                    SE_Level_info = ScopeEvaluation(Type, float(scope_info))
+                                    # スコープ評価追加
+                                    line_add_SE_Level = line_add_AE_Level + '\t' + SE_Level_info
+
+                                    # txtファイルに書き込む
+                                    wf.write(line_add_SE_Level + '\n')
+
+                                # フィールド変数（F）とメソッドの引数（M）の処理
+                                else:
+                                    # スコープ評価なし
+                                    line_add_SE_Level = line_add_AE_Level + '\t' + '-'
+                                    # txtファイルに書き込む
+                                    wf.write(line_add_SE_Level + '\n')
+                            
+                            # テスト用とドキュメント用と思われるファイルの処理
+                            else:
+                                # スコープ評価なし
+                                line_add_SE_Level = line_add_AE_Level + '\t' + '-'
                                 # txtファイルに書き込む
                                 wf.write(line_add_SE_Level + '\n')
+
 
     except FileNotFoundError:
         print(f"Error: '{textFile}' is not found")
@@ -492,5 +510,5 @@ def ScopeEvaluation(SE_type, SE_scope):
 
 if __name__ == '__main__':
     # input_txt_fileはtxtファイルの場所
-    input_txt_file = "./test_dubbo.txt"
+    input_txt_file = "./sample.txt"
     SingleLetterVariableEvaluation(input_txt_file)

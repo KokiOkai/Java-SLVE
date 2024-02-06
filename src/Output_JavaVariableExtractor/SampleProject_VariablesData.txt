@@ -1,0 +1,37 @@
+[target dir] SampleProject
+ (2 java files)
+path	line	kind	name	type	begin	end
+SampleProject/src/SampleFile_1.java	3	F	a	boolean	1	48
+SampleProject/src/SampleFile_1.java	4	F	b	char	1	48
+SampleProject/src/SampleFile_1.java	8	L	ve	SampleFile_1	8	10
+SampleProject/src/SampleFile_1.java	7	M	args	String[]	7	10
+SampleProject/src/SampleFile_1.java	15	L	c	byte	15	47
+SampleProject/src/SampleFile_1.java	16	L	d	short	16	47
+SampleProject/src/SampleFile_1.java	17	L	e	int	17	47
+SampleProject/src/SampleFile_1.java	18	L	f	float	18	47
+SampleProject/src/SampleFile_1.java	19	L	g	long	19	47
+SampleProject/src/SampleFile_1.java	20	L	h	double	20	47
+SampleProject/src/SampleFile_1.java	21	L	o	Object	21	47
+SampleProject/src/SampleFile_1.java	22	L	s	String	22	47
+SampleProject/src/SampleFile_1.java	23	L	t	Exception	23	47
+SampleProject/src/SampleFile_1.java	43	L	n	int[]	43	47
+SampleProject/src/SampleFile_1.java	44	L	i	int	44	46
+SampleProject/src/SampleFile_1.java	13	M	x	boolean	13	47
+SampleProject/src/SampleFile_1.java	13	M	y	char	13	47
+SampleProject/src/SampleFile_2.java	3	F	answer	boolean	1	48
+SampleProject/src/SampleFile_2.java	4	F	b	char	1	48
+SampleProject/src/SampleFile_2.java	8	L	ve	SampleFile_2	8	10
+SampleProject/src/SampleFile_2.java	7	M	args	String[]	7	10
+SampleProject/src/SampleFile_2.java	15	L	c	byte	15	47
+SampleProject/src/SampleFile_2.java	16	L	d	short	16	47
+SampleProject/src/SampleFile_2.java	17	L	index	int	17	47
+SampleProject/src/SampleFile_2.java	18	L	f	float	18	47
+SampleProject/src/SampleFile_2.java	19	L	g	long	19	47
+SampleProject/src/SampleFile_2.java	20	L	variable	double	20	47
+SampleProject/src/SampleFile_2.java	21	L	obj	Object	21	47
+SampleProject/src/SampleFile_2.java	22	L	str	String	22	47
+SampleProject/src/SampleFile_2.java	23	L	t	Exception	23	47
+SampleProject/src/SampleFile_2.java	43	L	n	int[]	43	47
+SampleProject/src/SampleFile_2.java	44	L	i	int	44	46
+SampleProject/src/SampleFile_2.java	13	M	x	boolean	13	47
+SampleProject/src/SampleFile_2.java	13	M	year	char	13	47

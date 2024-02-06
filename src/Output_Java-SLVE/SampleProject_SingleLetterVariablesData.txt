@@ -1,0 +1,27 @@
+[target dir] SampleProject
+ (2 java files)
+path	line	kind	name	type	begin	end	scope	AE-Level	SE-Level
+SampleProject/src/SampleFile_1.java	3	F	a	boolean	1	48	48	3	-
+SampleProject/src/SampleFile_1.java	4	F	b	char	1	48	48	4	-
+SampleProject/src/SampleFile_1.java	15	L	c	byte	15	47	33	4	2
+SampleProject/src/SampleFile_1.java	16	L	d	short	16	47	32	4	5
+SampleProject/src/SampleFile_1.java	17	L	e	int	17	47	31	5	1
+SampleProject/src/SampleFile_1.java	18	L	f	float	18	47	30	4	0
+SampleProject/src/SampleFile_1.java	19	L	g	long	19	47	29	4	0
+SampleProject/src/SampleFile_1.java	20	L	h	double	20	47	28	5	1
+SampleProject/src/SampleFile_1.java	21	L	o	Object	21	47	27	0	1
+SampleProject/src/SampleFile_1.java	22	L	s	String	22	47	26	0	1
+SampleProject/src/SampleFile_1.java	23	L	t	Exception	23	47	25	5	4
+SampleProject/src/SampleFile_1.java	43	L	n	int[]	43	47	5	-	-
+SampleProject/src/SampleFile_1.java	44	L	i	int	44	46	3	0	0
+SampleProject/src/SampleFile_1.java	13	M	x	boolean	13	47	35	4	-
+SampleProject/src/SampleFile_1.java	13	M	y	char	13	47	35	5	-
+SampleProject/src/SampleFile_2.java	4	F	b	char	1	48	48	4	-
+SampleProject/src/SampleFile_2.java	15	L	c	byte	15	47	33	4	2
+SampleProject/src/SampleFile_2.java	16	L	d	short	16	47	32	4	5
+SampleProject/src/SampleFile_2.java	18	L	f	float	18	47	30	4	0
+SampleProject/src/SampleFile_2.java	19	L	g	long	19	47	29	4	0
+SampleProject/src/SampleFile_2.java	23	L	t	Exception	23	47	25	5	4
+SampleProject/src/SampleFile_2.java	43	L	n	int[]	43	47	5	-	-
+SampleProject/src/SampleFile_2.java	44	L	i	int	44	46	3	0	0
+SampleProject/src/SampleFile_2.java	13	M	x	boolean	13	47	35	4	-

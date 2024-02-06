@@ -1,0 +1,18 @@
+[target file] SampleFile.java
+
+path	line	kind	name	type	begin	end	scope	AE-Level	SE-Level
+SampleFile.java	3	F	a	boolean	1	52	52	3	-
+SampleFile.java	4	F	b	char	1	52	52	4	-
+SampleFile.java	15	L	c	byte	15	51	37	4	3
+SampleFile.java	16	L	d	short	16	51	36	4	5
+SampleFile.java	17	L	e	int	17	51	35	5	1
+SampleFile.java	19	L	f	float	19	51	33	4	0
+SampleFile.java	20	L	g	long	20	51	32	4	0
+SampleFile.java	21	L	h	double	21	51	31	5	1
+SampleFile.java	22	L	o	Object	22	51	30	0	1
+SampleFile.java	23	L	s	String	23	51	29	0	1
+SampleFile.java	25	L	t	Exception	25	51	27	5	4
+SampleFile.java	47	L	n	int[]	47	51	5	-	-
+SampleFile.java	48	L	i	int	48	50	3	0	0
+SampleFile.java	13	M	x	boolean	13	51	39	4	-
+SampleFile.java	13	M	y	char	13	51	39	5	-

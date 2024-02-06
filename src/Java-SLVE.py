@@ -1,37 +1,35 @@
-# 一文字変数の保守性低下要因の検出メソッド
-def SingleLetterVariableEvaluation(textFile):
-    # ToDo: 自動で出力ファイル名を決めるように変更する
-    # output_txt_fileは保存するtxtファイルの場所
-    output_txt_file = "./output_Java-SLVE.txt"
+import os
 
+# 一文字変数の保守性低下要因の検出メソッド
+def SingleLetterVariableEvaluation(input_file, output_file, evaluated_target):
     try:
         # 読み込むtxtファイルを開く
-        with open(textFile) as rf:
+        with open(input_file) as rf:
             # 書き込むtxtファイルを開く
-            with open(output_txt_file, mode="w") as wf:
+            with open(output_file, mode="w") as wf:
                 # txtファイルを１行ずつ読み込む
                 # txtファイルの１行を要素としたlistになる
-                readFile = rf.read().splitlines()
+                read_file = rf.read().splitlines()
                 
                 # カウント変数
                 count = 0
 
                 # txtファイルを１行ずつ処理
-                for read_line in readFile:
+                for read_line in read_file:
                     # カウントの更新
                     count += 1
 
-                    # 1行目: 変数の分類
-                    if count == 1:
+                    # 1行目: 分析したファイル、ディレクトリ
+                    # 2行目: 分析したファイル数
+                    if count <= 2:
+                        wf.write(read_line + '\n')
+
+                    # 3行目: 変数の分類
+                    elif count == 3:
                         # 分類追加
                         line_class = read_line + '\tscope\tAE-Level\tSE-Level\n'
                         # txtファイルに書き込む
                         wf.write(line_class)
-
-                    # 2行目: 分析したdirectory
-                    # 3行目: 分析したファイル数
-                    elif count <= 3:
-                        wf.write(read_line + '\n')
 
                     # 4行目以降: 変数のデータ
                     else:
@@ -94,10 +92,6 @@ def SingleLetterVariableEvaluation(textFile):
                                 line_add_SE_Level = line_add_AE_Level + '\t' + '-'
                                 # txtファイルに書き込む
                                 wf.write(line_add_SE_Level + '\n')
-
-
-    except FileNotFoundError:
-        print(f"Error: '{textFile}' is not found")
 
     except Exception as e:
         print(f"Error: {e}")
@@ -508,7 +502,31 @@ def ScopeEvaluation(SE_type, SE_scope):
     return SE_Level
 
 
+# 評価対象の名称の取得メソッド
+def ExtractPrefix(file_name, suffix="_VariablesData.txt"):
+    # 指定したsuffixを取り除く
+    extracted_prefix = file_name.replace(suffix, "")
+    return extracted_prefix
+
+
 if __name__ == '__main__':
-    # input_txt_fileはtxtファイルの場所
-    input_txt_file = "./sample.txt"
-    SingleLetterVariableEvaluation(input_txt_file)
+    # Output_JavaVariableExtractorフォルダのパス
+    output_JavaVariableExtractor_path = './Output_JavaVariableExtractor'
+    # フォルダ内のtxtファイル一覧を取得
+    input_txt_file = os.listdir(output_JavaVariableExtractor_path)
+
+    # フォルダ内の各要素に対して処理
+    for item in input_txt_file:
+        # 評価対象の名称の取得
+        target_name = ExtractPrefix(item)
+        # 出力パス
+        output_path = './Output_Java-SLVE/' + target_name + '_SingleLetterVariablesData.txt'
+
+        # 入力パス
+        input_path = os.path.join(output_JavaVariableExtractor_path, item)
+
+        # txtファイルの処理
+        if os.path.isfile(input_path) and input_path.lower().endswith('.txt'):
+            SingleLetterVariableEvaluation(input_path, output_path, target_name)
+        else:
+            print('Error: VariablesData.txt file is not found')

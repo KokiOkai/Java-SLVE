@@ -1,0 +1,22 @@
+[target file] SampleFile.java
+
+path	line	kind	name	type	begin	end
+SampleFile.java	3	F	a	boolean	1	52
+SampleFile.java	4	F	b	char	1	52
+SampleFile.java	8	L	ve	SampleFile	8	10
+SampleFile.java	7	M	args	String[]	7	10
+SampleFile.java	15	L	c	byte	15	51
+SampleFile.java	16	L	d	short	16	51
+SampleFile.java	17	L	e	int	17	51
+SampleFile.java	18	L	index	int	18	51
+SampleFile.java	19	L	f	float	19	51
+SampleFile.java	20	L	g	long	20	51
+SampleFile.java	21	L	h	double	21	51
+SampleFile.java	22	L	o	Object	22	51
+SampleFile.java	23	L	s	String	23	51
+SampleFile.java	24	L	name	String	24	51
+SampleFile.java	25	L	t	Exception	25	51
+SampleFile.java	47	L	n	int[]	47	51
+SampleFile.java	48	L	i	int	48	50
+SampleFile.java	13	M	x	boolean	13	51
+SampleFile.java	13	M	y	char	13	51

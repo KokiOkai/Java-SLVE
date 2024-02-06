@@ -61,7 +61,8 @@ $ python3 Main.py
 ```
 $ cd Java-SLVE/src
 ```
-2. **txt_csv_Converter.py** を実行する．例では **python3** のバージョンを使用していますが，必要に応じて変更してください．
+2. **txt_csv_Converter.py** を実行する．例では **python3** のバージョンを使用していますが，必要に応じて変更してください．<br>
+   csv 変換したい txt ファイルの指定は **txt_csv_Converter.py** 内のコード`file_path`を変更して行ってください．
 ```
 $ python3 txt_csv_Converter.py
 ```

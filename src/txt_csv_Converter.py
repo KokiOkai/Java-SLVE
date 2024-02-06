@@ -28,6 +28,6 @@ if __name__ == '__main__':
     if not os.path.exists('Output_csv'):
         os.makedirs('Output_csv')
 
-    # filenameはcsv変換したいtxtファイルのパス
+    # file_pathはcsv変換したいtxtファイルのパス
     file_path = "./Output_Java-SLVE/SampleProject_SingleLetterVariablesData.txt"
     txt_csv_converter(file_path)

@@ -19,11 +19,12 @@ Java プロジェクトであるディレクトリまたはファイルを入力
 ## 使用方法
 1. `Java-SLVE/src`にある **EvaluatedTargets** フォルダに，本ツールを適用したいディレクトリまたは java ファイルをコピーします．<br>
    注意点として，**JavaVariableExtractor.jar** は消さないようにしてください．
-2. cd コマンドで`Java-SLVE/src`に移動する．
+2. cd コマンドで`Java-SLVE/src`に移動します．
 ```
 $ cd Java-SLVE/src
 ```
-3. **Main.py** を実行する．例では **python3** のバージョンを使用していますが，必要に応じて変更してください．<br>
+3. **Main.py** を実行します．<br>
+   例では **python3** のバージョンを使用していますが，必要に応じて変更してください．<br>
    バージョンを変更する場合は，**Main.py** 内のコード`command_2 = ['python3', 'Java-SLVE.py']`も変更してください．
 ```
 $ python3 Main.py
@@ -61,7 +62,8 @@ $ python3 Main.py
 ```
 $ cd Java-SLVE/src
 ```
-2. **txt_csv_Converter.py** を実行する．例では **python3** のバージョンを使用していますが，必要に応じて変更してください．<br>
+2. **txt_csv_Converter.py** を実行します．<br>
+   例では **python3** のバージョンを使用していますが，必要に応じて変更してください．<br>
    csv 変換したい txt ファイルの指定は **txt_csv_Converter.py** 内のコード`file_path`を変更して行ってください．
 ```
 $ python3 txt_csv_Converter.py

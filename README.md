@@ -12,7 +12,7 @@
 
 ## 概要
 **Java-SLVE**は，Java プロジェクトにおけるソースコード内の一文字変数を評価するツールです．<br>
-本ツールは [JavaVariableExtractor](https://github.com/amanhirohisa/JavaVariableExtractor) を内蔵しています．<br>
+本ツールは愛媛大学 阿萬裕久教授が開発した [JavaVariableExtractor](https://github.com/amanhirohisa/JavaVariableExtractor) を許可を得て内蔵しています．<br>
 Java プロジェクトであるディレクトリまたはファイルを入力として，ソースコードに含まれる変数のデータを収集し，一文字変数を変数の型・アルファベット・スコープをもとに評価したデータを出力します．
 
 
